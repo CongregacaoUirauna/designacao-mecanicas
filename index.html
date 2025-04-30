@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Designações Mecânicas Maio, Junho e Julho 2025</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .titulo { background-color: #2a6b77; color: white; padding: 15px; font-size: 26px; font-weight: bold; text-align: center; border-top-left-radius: 12px; border-top-right-radius: 12px; margin-top: 40px; }
+    .table-container { overflow-x: auto; border: 2px solid #000; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; }
+    table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 800px; }
+    th { background-color: #d68f00; color: white; padding: 10px; text-align: center; font-size: 16px; border: 1px solid #000; }
+    td { padding: 10px; text-align: center; font-weight: bold; border: 1px solid #000; }
+    th:first-child { border-top-left-radius: 12px; }
+    th:last-child { border-top-right-radius: 12px; }
+    tr:last-child td:first-child { border-bottom-left-radius: 12px; }
+    tr:last-child td:last-child { border-bottom-right-radius: 12px; }
+    #filtro-mes { margin-bottom: 20px; padding: 8px; font-size: 16px; }
+    .print-btn, .pdf-btn { margin-right: 10px; padding: 8px 12px; font-size: 16px; cursor: pointer; }
+    @media (max-width: 768px) {
+      .titulo { font-size: 22px; }
+      th, td { font-size: 14px; padding: 8px; }
+      table { min-width: 600px; }
+    }
+    @media (max-width: 480px) {
+      th, td { font-size: 12px; padding: 6px; }
+      table { min-width: 500px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Botões de ação -->
+  <button class="print-btn" onclick="window.print()">🖨️ Imprimir</button>
+  <button class="pdf-btn" id="btn-pdf">📄 Baixar PDF</button>
+
+  <!-- Filtro de meses -->
+  <select id="filtro-mes" class="no-print">
+    <option value="todos">Todos</option>
+    <option value="maio">Maio</option>
+    <option value="junho">Junho</option>
+    <option value="julho">Julho</option>
+  </select>
+
+  <!-- Seções por mês -->
+  <section class="mes mes-maio">
+    <div class="titulo">Designações Mecânicas — Maio 2025</div>
+    <div class="table-container">
+      <table>
+        <thead><tr><th>Data</th><th>Indicador (Quarta)</th><th>Volante (Quarta)</th><th>Som (Quarta)</th><th>Indicador (Sábado)</th><th>Volante (Sábado)</th><th>Som (Sábado)</th><th>Presidente (Sábado)</th><th>Leitor (Sábado)</th></tr></thead>
+        <tbody>
+          <tr><td>07-10/05</td><td>Glebston</td><td>Rony</td><td>Edinho</td><td>Glebston</td><td>Rony</td><td>Edinho</td><td>Francisco N.</td><td>Elton</td></tr>
+          <tr><td>14-17/05</td><td>Elton</td><td>Gabriel</td><td>Edinho</td><td>Elton</td><td>Gabriel</td><td>Renato</td><td>Elton</td><td>Edinho</td></tr>
+          <tr><td>21-24/05</td><td>Francisco N.</td><td>Elton</td><td>Edinho</td><td>Renato</td><td>Elton</td><td>Edinho</td><td>Renato</td><td>Rony</td></tr>
+          <tr><td>28-31/05</td><td>Renato</td><td>Gabriel</td><td>Edinho</td><td>Rony</td><td>Gabriel</td><td>Edinho</td><td>Glebston</td><td>Glebston</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="mes mes-junho">
+    <div class="titulo">Designações Mecânicas — Junho 2025</div>
+    <div class="table-container">
+      <table>
+        <thead><tr><th>Data</th><th>Indicador (Quarta)</th><th>Volante (Quarta)</th><th>Som (Quarta)</th><th>Indicador (Sábado)</th><th>Volante (Sábado)</th><th>Som (Sábado)</th><th>Presidente (Sábado)</th><th>Leitor (Sábado)</th></tr></thead>
+        <tbody>
+          <tr><td>04-07/06</td><td>Elton</td><td>Rony</td><td>Edinho</td><td>Glebston</td><td>Elton</td><td>Edinho</td><td>Francisco N.</td><td>Rony</td></tr>
+          <tr><td>11-14/06</td><td>Rony</td><td>Elton</td><td>Edinho</td><td>Elton</td><td>Rony</td><td>Glebston</td><td>Elton</td><td>Edinho</td></tr>
+          <tr><td>18-21/06</td><td>Elton</td><td>Rony</td><td>Edinho</td><td>Rony</td><td>Elton</td><td>Edinho</td><td>Francisco N.</td><td>Glebston</td></tr>
+          <tr><td>25-28/06</td><td>Elton</td><td>Rony</td><td>Edinho</td><td>Glebston</td><td>Rony</td><td>Edinho</td><td>Francisco N.</td><td>Elton</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="mes mes-julho">
+    <div class="titulo">Designações Mecânicas — Julho 2025</div>
+    <div class="table-container">
+      <table>
+        <thead><tr><th>Data</th><th>Indicador (Quarta)</th><th>Volante (Quarta)</th><th>Som (Quarta)</th><th>Indicador (Sábado)</th><th>Volante (Sábado)</th><th>Som (Sábado)</th><th>Presidente (Sábado)</th><th>Leitor (Sábado)</th></tr></thead>
+        <tbody>
+          <tr><td>01-05/07</td><td>Rony</td><td>Elton</td><td>Edinho</td><td>Glebston</td><td>Elton</td><td>Edinho</td><td>Francisco N.</td><td>Rony</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- jsPDF via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/jspdf"></script>
+  <script>
+    document.getElementById('btn-pdf').addEventListener('click', () => {
+      const doc = new jsPDF('l', 'pt', 'a4');
+      doc.html(document.body, {
+        callback: () => doc.save('designacoes.pdf'),
+        x: 20, y: 20
+      });
+    });
+    const filtro = document.getElementById('filtro-mes');
+    const sections = document.querySelectorAll('.mes');
+    filtro.addEventListener('change', e => {
+      sections.forEach(sec => {
+        sec.style.display = e.target.value === 'todos' || sec.classList.contains(`mes-${e.target.value}`) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
