@@ -30,16 +30,15 @@
 </head>
 <body>
   <!-- Botões de ação -->
-  <button class="print-btn" onclick="window.print()">🖨️ Imprimir</button>
-  <button class="pdf-btn" id="btn-pdf">📄 Baixar PDF</button>
-
-  <!-- Filtro de meses -->
-  <select id="filtro-mes" class="no-print">
-    <option value="todos">Todos</option>
-    <option value="maio">Maio</option>
-    <option value="junho">Junho</option>
-    <option value="julho">Julho</option>
-  </select>
+  <label for="filtro-mes" class="no-print" style="margin-right:10px; font-weight:bold;">Filtrar por mês:</label>
+<select id="filtro-mes" class="no-print" style="margin-right:10px;">
+  <option value="todos">Todos</option>
+  <option value="maio">Maio</option>
+  <option value="junho">Junho</option>
+  <option value="julho">Julho</option>
+</select>
+<button class="print-btn" onclick="window.print()">🖨️ Imprimir</button>
+<button class="pdf-btn" id="btn-pdf">📄 Baixar PDF</button>
 
   <!-- Seções por mês -->
   <section class="mes mes-maio">
