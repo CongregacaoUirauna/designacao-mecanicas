@@ -3,107 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Designações Mecânicas Outubro, Novembro e Dezembro 2025</title>
+  <title>Designações Mecânicas — 1º Trimestre 2026</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    .titulo { background-color: #2a6b77; color: white; padding: 15px; font-size: 26px; font-weight: bold; text-align: center; border-top-left-radius: 12px; border-top-right-radius: 12px; margin-top: 40px; }
-    .table-container { 
-      overflow-x: hidden; 
-      border: 2px solid #000; 
-      border-bottom-left-radius: 12px; 
-      border-bottom-right-radius: 12px; 
-    }
-    table { 
-      width: 100%; 
-      border-collapse: separate; 
-      border-spacing: 0; 
-      table-layout: fixed; 
-    }
-    th, td { 
-      padding: 8px; 
-      text-align: center; 
-      font-weight: bold; 
-      border: 1px solid #000; 
-      word-wrap: break-word; 
-      font-size: 14px; 
-    }
-    th { 
-      background-color: #d68f00; 
-      color: white; 
-      font-size: 16px; 
-    }
-    th:first-child { border-top-left-radius: 12px; }
-    th:last-child { border-top-right-radius: 12px; }
-    tr:last-child td:first-child { border-bottom-left-radius: 12px; }
-    tr:last-child td:last-child { border-bottom-right-radius: 12px; }
-    #filtro-mes { margin-bottom: 20px; padding: 8px; font-size: 16px; }
-    .print-btn, .pdf-btn { margin-right: 10px; padding: 8px 12px; font-size: 16px; cursor: pointer; }
-
-    @media (max-width: 768px) {
-      .titulo { font-size: 22px; }
-      th, td { font-size: 12px; padding: 6px; }
-    }
-    @media (max-width: 480px) {
-      th, td { font-size: 10px; padding: 4px; }
-      body { margin: 10px; }
-      .print-btn, .pdf-btn { font-size: 14px; padding: 6px 10px; }
-      #filtro-mes { font-size: 14px; padding: 6px; }
-    }
+    body { font-family: Arial, sans-serif; margin: 20px; color: #333; }
+    .titulo { background-color: #2a6b77; color: white; padding: 15px; font-size: 24px; font-weight: bold; text-align: center; border-top-left-radius: 12px; border-top-right-radius: 12px; margin-top: 30px; }
+    .table-container { overflow-x: hidden; border: 2px solid #000; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    th, td { padding: 8px; text-align: center; font-weight: bold; border: 1px solid #000; word-wrap: break-word; font-size: 13px; }
+    th { background-color: #d68f00; color: white; font-size: 14px; text-transform: uppercase; }
+    .header-quinta { background-color: #1e4d56; }
+    .header-domingo { background-color: #a36d00; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+    #controles { margin-bottom: 20px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    select, button { padding: 10px; font-size: 14px; font-weight: bold; cursor: pointer; border-radius: 5px; border: 1px solid #ccc; }
+    .btn-print { background-color: #2a6b77; color: white; border: none; }
+    .btn-pdf { background-color: #d68f00; color: white; border: none; }
+    
+    @media print { .no-print { display: none; } body { margin: 0; } .titulo { margin-top: 0; } }
+    @media (max-width: 768px) { th, td { font-size: 11px; padding: 4px; } .titulo { font-size: 18px; } }
   </style>
 </head>
 <body>
-  <label for="filtro-mes" class="no-print" style="margin-right:10px; font-weight:bold;">Filtrar por mês:</label>
-<select id="filtro-mes" class="no-print" style="margin-right:10px;">
-  <option value="todos">Todos</option>
-  <option value="outubro">Outubro</option>
-  <option value="novembro">Novembro</option>
-  <option value="dezembro">Dezembro</option>
-</select>
-<button class="print-btn" onclick="window.print()">🖨️ Imprimir</button>
-<button class="pdf-btn" id="btn-pdf">📄 Baixar PDF</button>
 
-  <section class="mes mes-outubro">
-    <div class="titulo">Designações Mecânicas — Outubro 2025</div>
+  <div id="controles" class="no-print">
+    <label style="font-weight:bold;">Filtrar Mês:</label>
+    <select id="filtro-mes">
+      <option value="todos">Ver Trimestre Completo</option>
+      <option value="jan">Janeiro</option>
+      <option value="fev">Fevereiro</option>
+      <option value="mar">Março</option>
+    </select>
+    <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>
+    <button class="btn-pdf" id="btn-pdf">📄 Baixar PDF</button>
+  </div>
+
+  <section class="secao-mes" id="mes-jan">
+    <div class="titulo">Designações Mecânicas — Janeiro 2026</div>
     <div class="table-container">
       <table>
-        <thead><tr><th>Data</th><th>Indicador (Quarta)</th><th>Volante (Quarta)</th><th>Som (Quarta)</th><th>Indicador (Sábado)</th><th>Volante (Sábado)</th><th>Som (Sábado)</th><th>Presidente (Sábado)</th><th>Leitor (Sábado)</th></tr></thead>
+        <thead>
+          <tr>
+            <th style="width: 10%;">Data</th>
+            <th class="header-quinta">Ind (Qui)</th>
+            <th class="header-quinta">Vol (Qui)</th>
+            <th class="header-quinta">Som (Qui)</th>
+            <th class="header-domingo">Ind (Dom)</th>
+            <th class="header-domingo">Vol (Dom)</th>
+            <th class="header-domingo">Som (Dom)</th>
+            <th class="header-domingo">Pres (Dom)</th>
+            <th class="header-domingo">Leit (Dom)</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td>01-04/10</td><td>Rony</td><td>Elton</td><td>Edinho</td><td>Glebston</td><td>Rony</td><td>Glebston</td><td>Elton</td><td>Elton</td></tr>
-          <tr><td>08-11/10</td><td>Elton</td><td>Gabriel</td><td>Edinho</td><td>Elton</td><td>Gabriel</td><td>Edinho</td><td>Francisco N.</td><td>Rony</td></tr>
-          <tr><td>15-18/10</td><td>Rony</td><td>Nicacio</td><td>Edinho</td><td>Rony</td><td>Nicacio</td><td>Gabriel</td><td>Elton</td><td>Edinho</td></tr>
-          <tr><td>22-25/10</td><td>Elton</td><td>Rony</td><td>Gabriel</td><td>Glebston</td><td>Elton</td><td>Glebston</td><td>Francisco N.</td><td>Rony</td></tr>
-          <tr><td>29/10-01/11</td><td>Rony</td><td>Elton</td><td>Edinho</td><td>Elton</td><td>Edinho</td><td>Gabriel</td><td>Elton</td><td>Elton</td></tr>
+          <tr><td>01-04</td><td>Rony</td><td>Elton</td><td>Edinho</td><td>Glebston</td><td>Nicacio</td><td>Edinho</td><td>César</td><td>Elton</td></tr>
+          <tr><td>08-11</td><td>Elton</td><td>Nicacio</td><td>Edinho</td><td>Elton</td><td>Rony</td><td>Glebston</td><td>Francisco N.</td><td>Francisco N.</td></tr>
+          <tr><td>15-18</td><td>Rony</td><td>Elton</td><td>Edinho</td><td>Rony</td><td>Nicacio</td><td>Edinho</td><td>Elton</td><td>Glebston</td></tr>
+          <tr><td>22-25</td><td>Elton</td><td>Rony</td><td>Edinho</td><td>Edinho</td><td>Elton</td><td>Glebston</td><td>César</td><td>Rony</td></tr>
+          <tr><td>29-01</td><td>Rony</td><td>Nicacio</td><td>Edinho</td><td>Francisco N.</td><td>Rony</td><td>Edinho</td><td>Francisco N.</td><td>Elton</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <section class="mes mes-novembro">
-    <div class="titulo">Designações Mecânicas — Novembro 2025</div>
+  <section class="secao-mes" id="mes-fev">
+    <div class="titulo">Designações Mecânicas — Fevereiro 2026</div>
     <div class="table-container">
       <table>
-        <thead><tr><th>Data</th><th>Indicador (Quarta)</th><th>Volante (Quarta)</th><th>Som (Quarta)</th><th>Indicador (Sábado)</th><th>Volante (Sábado)</th><th>Som (Sábado)</th><th>Presidente (Sábado)</th><th>Leitor (Sábado)</th></tr></thead>
+        <thead>
+          <tr>
+            <th style="width: 10%;">Data</th>
+            <th class="header-quinta">Ind (Qui)</th>
+            <th class="header-quinta">Vol (Qui)</th>
+            <th class="header-quinta">Som (Qui)</th>
+            <th class="header-domingo">Ind (Dom)</th>
+            <th class="header-domingo">Vol (Dom)</th>
+            <th class="header-domingo">Som (Dom)</th>
+            <th class="header-domingo">Pres (Dom)</th>
+            <th class="header-domingo">Leit (Dom)</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td>05-08/11</td><td>Elton</td><td>Gabriel</td><td>Edinho</td><td>Rony</td><td>Rony</td><td>Glebston</td><td>Francisco N.</td><td>Edinho</td></tr>
-          <tr><td>12-15/11</td><td>Rony</td><td>Nicacio</td><td>Edinho</td><td>Glebston</td><td>Gabriel</td><td>Edinho</td><td>Elton</td><td>Elton</td></tr>
-          <tr><td>19-22/11</td><td>Elton</td><td>Rony</td><td>Gabriel</td><td>Elton</td><td>Nicacio</td><td>Gabriel</td><td>Francisco N.</td><td>Rony</td></tr>
-          <tr><td>26-29/11</td><td>Rony</td><td>Elton</td><td>Edinho</td><td>Rony</td><td>Elton</td><td>Glebston</td><td>Elton</td><td>Edinho</td></tr>
+          <tr><td>05-08</td><td>Elton</td><td>Rony</td><td>Edinho</td><td>Rony</td><td>Nicacio</td><td>Glebston</td><td>Edinho</td><td>Francisco N.</td></tr>
+          <tr><td>12-15</td><td>Rony</td><td>Nicacio</td><td>Edinho</td><td>Glebston</td><td>Elton</td><td>Edinho</td><td>César</td><td>Rony</td></tr>
+          <tr><td>19-22</td><td>Elton</td><td>Nicacio</td><td>Edinho</td><td>Francisco N.</td><td>Rony</td><td>Glebston</td><td>Francisco N.</td><td>Edinho</td></tr>
+          <tr><td>26-01</td><td>Rony</td><td>Elton</td><td>Edinho</td><td>Elton</td><td>Nicacio</td><td>Edinho</td><td>Elton</td><td>Glebston</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <section class="mes mes-dezembro">
-    <div class="titulo">Designações Mecânicas — Dezembro 2025</div>
+  <section class="secao-mes" id="mes-mar">
+    <div class="titulo">Designações Mecânicas — Março 2026</div>
     <div class="table-container">
       <table>
-        <thead><tr><th>Data</th><th>Indicador (Quarta)</th><th>Volante (Quarta)</th><th>Som (Quarta)</th><th>Indicador (Sábado)</th><th>Volante (Sábado)</th><th>Som (Sábado)</th><th>Presidente (Sábado)</th><th>Leitor (Sábado)</th></tr></thead>
+        <thead>
+          <tr>
+            <th style="width: 10%;">Data</th>
+            <th class="header-quinta">Ind (Qui)</th>
+            <th class="header-quinta">Vol (Qui)</th>
+            <th class="header-quinta">Som (Qui)</th>
+            <th class="header-domingo">Ind (Dom)</th>
+            <th class="header-domingo">Vol (Dom)</th>
+            <th class="header-domingo">Som (Dom)</th>
+            <th class="header-domingo">Pres (Dom)</th>
+            <th class="header-domingo">Leit (Dom)</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td>03-06/12</td><td>Elton</td><td>Gabriel</td><td>Edinho</td><td>Glebston</td><td>Edinho</td><td>Gabriel</td><td>Francisco N.</td><td>Rony</td></tr>
-          <tr><td>10-13/12</td><td>Rony</td><td>Nicacio</td><td>Edinho</td><td>Elton</td><td>Rony</td><td>Glebston</td><td>Elton</td><td>Elton</td></tr>
-          <tr><td>17-20/12</td><td>Elton</td><td>Rony</td><td>Gabriel</td><td>Rony</td><td>Gabriel</td><td>Edinho</td><td>Francisco N.</td><td>Nicacio</td></tr>
-          <tr><td>24-27/12</td><td>Rony</td><td>Elton</td><td>Edinho</td><td>Glebston</td><td>Nicacio</td><td>Gabriel</td><td>Elton</td><td>Edinho</td></tr>
-          <tr><td>31/12</td><td>Elton</td><td>Gabriel</td><td>Edinho</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+          <tr><td>05-08</td><td>Elton</td><td>Nicacio</td><td>Edinho</td><td>Rony</td><td>Elton</td><td>Glebston</td><td>César</td><td>Francisco N.</td></tr>
+          <tr><td>12-15</td><td>Rony</td><td>Elton</td><td>Edinho</td><td>Francisco N.</td><td>Nicacio</td><td>Edinho</td><td>Francisco N.</td><td>Elton</td></tr>
+          <tr><td>19-22</td><td>Elton</td><td>Rony</td><td>Edinho</td><td>Elton</td><td>Edinho</td><td>Glebston</td><td>Elton</td><td>Rony</td></tr>
+          <tr><td>26-29</td><td>Rony</td><td>Rony</td><td>Edinho</td><td>Glebston</td><td>Nicacio</td><td>Edinho</td><td>César</td><td>Francisco N.</td></tr>
         </tbody>
       </table>
     </div>
@@ -111,19 +121,18 @@
 
   <script src="https://cdn.jsdelivr.net/npm/jspdf"></script>
   <script>
-    document.getElementById('btn-pdf').addEventListener('click', () => {
-      const doc = new jsPDF('l', 'pt', 'a4');
-      doc.html(document.body, {
-        callback: () => doc.save('designacoes.pdf'),
-        x: 20, y: 20
+    // Filtro de Mês
+    const filtro = document.getElementById('filtro-mes');
+    filtro.addEventListener('change', () => {
+      const val = filtro.value;
+      document.querySelectorAll('.secao-mes').forEach(sec => {
+        sec.style.display = (val === 'todos' || sec.id === 'mes-' + val) ? 'block' : 'none';
       });
     });
-    const filtro = document.getElementById('filtro-mes');
-    const sections = document.querySelectorAll('.mes');
-    filtro.addEventListener('change', e => {
-      sections.forEach(sec => {
-        sec.style.display = e.target.value === 'todos' || sec.classList.contains(`mes-${e.target.value}`) ? 'block' : 'none';
-      });
+
+    // Função PDF simplificada (ajuste conforme necessidade de biblioteca externa)
+    document.getElementById('btn-pdf').addEventListener('click', () => {
+      window.print(); // Otimizado para salvar como PDF via diálogo de impressão
     });
   </script>
 </body>
